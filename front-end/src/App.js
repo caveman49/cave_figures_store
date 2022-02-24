@@ -2,9 +2,9 @@ import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import Figures from "./components/Figures";
-// import AddBudget from "./components/AddBudget";
-// import Details from "./components/Details";
-// import EditBudget from "./components/EditBudget";
+import AddFigure from "./components/AddFigure";
+import FigureDetails from "./components/FigureDetails";
+import EditFigure from "./components/EditFigure";
 
 function App() {
   return (
@@ -13,10 +13,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/figures" element={<Figures />} />
-        {/* <Route path="/transactions/new" element={<AddBudget />} />
-        <Route path="/transactions/details/:index" element={<Details />} />
-        <Route path="/transactions/edit/:index" element={<EditBudget />} />
-        <Route path="/transactions/new" element={<LogNewForm />} /> */}
+        <Route path="/figures/new" element={<AddFigure />} />
+        <Route path="/figures/details/:id" element={<FigureDetails />} />
+        <Route path="/transactions/edit/:index" element={<EditFigure />} />
       </Routes>
     </>
   );

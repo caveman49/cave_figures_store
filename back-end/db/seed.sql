@@ -8,5 +8,5 @@ INSERT INTO figures (name, description, price, rating, is_featured) VALUES
 ('He-Man', 'I am have the Power', 30, 3, false),
 ('Thundercats', 'Thundercats!! Hooooo!!', 75, 3, true),
 ('Land Before Time', 'Yup, yup, yup!!', 3, 1, false),
-('Bionic Six', 'Bionics...On!!', 30, 3, false),
+('Bionic Six', 'Bionics...On!!', 30, 3, true),
 ('G.I. Joe', 'Great American Hero', 30, 3, false);

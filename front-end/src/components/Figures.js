@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-// import "./Transactions.css";
+import "./Figures.css";
 
 function Figures() {
   const [figures, setFigures] = useState([]);
@@ -29,10 +29,10 @@ function Figures() {
       <div>
         <table>
           <tr>
-            <th>{element.name}</th>
             <th>
-              <Link to={`/figures/details/${i}`}>{element.description}</Link>
+              <Link to={`/figures/details/${element.id}`}> {element.name}</Link>
             </th>
+            <th>{element.description}</th>
             <th>{element.price}</th>
             <th>
               <button id={element.id} onClick={HandleDelete}>
@@ -44,6 +44,36 @@ function Figures() {
       </div>
     );
   });
+
+  //   <table class="table table-dark">
+  //     <thead>
+  //       <tr>
+  //         <th scope="col">Name</th>
+  //         <th scope="col">Description</th>
+  //         <th scope="col">Price</th>
+  //       </tr>
+  //     </thead>
+  //     <tbody>
+  //       <tr>
+  //         <th scope="row">1</th>
+  //         <td>Mark</td>
+  //         <td>Otto</td>
+  //         <td>@mdo</td>
+  //       </tr>
+  //       <tr>
+  //         <th scope="row">2</th>
+  //         <td>Jacob</td>
+  //         <td>Thornton</td>
+  //         <td>@fat</td>
+  //       </tr>
+  //       <tr>
+  //         <th scope="row">3</th>
+  //         <td>Larry</td>
+  //         <td>the Bird</td>
+  //         <td>@twitter</td>
+  //       </tr>
+  //     </tbody>
+  //   </table>;
 
   return (
     <div className="text-center">
